@@ -3,7 +3,7 @@
 ## 1) Tạo service mới
 - Vào Railway → `New Project` → `Deploy from GitHub repo`.
 - Chọn repo hiện tại.
-- Ở service settings, đặt `Root Directory` là `aqua-store/backend`.
+- Ở service settings, đặt `Root Directory` là `backend`.
 - Railway sẽ dùng `Dockerfile` + `railway.json` trong thư mục này.
 
 ## 2) Cấu hình Environment Variables
