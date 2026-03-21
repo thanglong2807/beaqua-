@@ -5,7 +5,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY package*.json ./
-RUN npm config set legacy-peer-deps true && npm config set unsafe-perm true && npm config set engine-strict false && npm install --production
+RUN npm install --production --legacy-peer-deps --engine-strict=false --unsafe-perm
 
 COPY . .
 
