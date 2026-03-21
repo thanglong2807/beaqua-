@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bai_viets",
+  "info": {
+    "singularName": "bai-viet",
+    "pluralName": "bai-viets",
+    "displayName": "Bài viết"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TieuDe": {
+      "type": "string",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "TieuDe",
+      "required": true
+    },
+    "MoTaNgan": {
+      "type": "text",
+      "required": true
+    },
+    "NoiDung": {
+      "type": "blocks",
+      "required": true
+    },
+    "HinhDaiDien": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "NgayDang": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

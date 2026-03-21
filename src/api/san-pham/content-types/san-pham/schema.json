@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "san_phams",
+  "info": {
+    "singularName": "san-pham",
+    "pluralName": "san-phams",
+    "displayName": "Sản phẩm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TenSanPham": {
+      "type": "string",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "TenSanPham",
+      "required": true
+    },
+    "MoTaNgan": {
+      "type": "text"
+    },
+    "ThongTinChiTiet": {
+      "type": "blocks"
+    },
+    "Gia": {
+      "type": "string"
+    },
+    "AnhDaiDien": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "GalleryAnh": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "LaSanPhamNoiBat": {
+      "type": "boolean",
+      "default": false
+    },
+    "danh_muc": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::danh-muc.danh-muc",
+      "inversedBy": "san_phams"
+    }
+  }
+}
