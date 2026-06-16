@@ -1,21 +1,29 @@
 services:
   - type: web
-    name: beaqua-strapi
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    name: beaqua
+    runtime: node
+    region: singapore
     plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /admin
     envVars:
+      - key: NODE_VERSION
+        value: 20.x
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 1337
       - key: HOST
         value: 0.0.0.0
+      - key: PORT
+        value: 1337
       - key: DATABASE_CLIENT
         value: postgres
       - key: DATABASE_URL
         sync: false
+      - key: DATABASE_SSL
+        value: true
+      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+        value: false
       - key: APP_KEYS
         sync: false
       - key: API_TOKEN_SALT
@@ -28,4 +36,3 @@ services:
         sync: false
       - key: ENCRYPTION_KEY
         sync: false
-    healthCheckPath: /admin
