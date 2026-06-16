@@ -13,7 +13,7 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "postinstall": "node -e \"if(process.env.NODE_ENV==='production'){require('child_process').execSync('npm run build',{stdio:'inherit'})}\" "
+    "postinstall": "node -e \"if(process.env.NODE_ENV==='production'){require('child_process').execSync('npm run build',{stdio:'inherit',env:{...process.env,NODE_OPTIONS:'--max-old-space-size=460'}})}\" "
   },
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^1.1.2",
