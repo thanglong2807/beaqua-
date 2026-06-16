@@ -20,11 +20,14 @@
     "@strapi/plugin-users-permissions": "5.37.1",
     "@strapi/strapi": "5.37.1",
     "better-sqlite3": "12.4.1",
+    "export-import-kkm": "^1.1.1",
     "pg": "^8.19.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "styled-components": "^6.0.0",
+    "xlsx": "^0.18.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
