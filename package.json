@@ -17,17 +17,15 @@
   "dependencies": {
     "@ckeditor/strapi-plugin-ckeditor": "^1.1.2",
     "@strapi/plugin-cloud": "5.37.1",
+    "@strapi/plugin-documentation": "^5.48.0",
     "@strapi/plugin-users-permissions": "5.37.1",
     "@strapi/strapi": "5.37.1",
     "better-sqlite3": "12.4.1",
-    "export-import-kkm": "^1.1.1",
     "pg": "^8.19.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0",
-    "xlsx": "^0.18.5",
-    "zod": "^4.3.6"
+    "styled-components": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

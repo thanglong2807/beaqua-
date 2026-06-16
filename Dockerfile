@@ -11,6 +11,6 @@ COPY . .
 
 RUN npm run build && npm prune --omit=dev
 
-EXPOSE 1337
+EXPOSE $PORT
 
 CMD ["npm", "run", "start"]
